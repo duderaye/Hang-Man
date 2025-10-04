@@ -259,6 +259,17 @@ const drawMan = (count) => {
   }
 };
 
+// ✅ Keyboard input
+document.addEventListener("keydown", (event) => {
+  let key = event.key.toUpperCase();
+  if (key >= "A" && key <= "Z") {
+    let buttons = document.querySelectorAll(".letters");
+    buttons.forEach((btn) => {
+      if (btn.innerText === key && !btn.disabled) btn.click();
+    });
+  }
+});
+
 //New Game
 newGameButton.addEventListener("click", initializer);
 window.onload = initializer;
