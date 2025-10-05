@@ -11,39 +11,26 @@ const resultText = document.getElementById("result-text");
 //Options values for buttons
 let options = {
   fruits: [
-     "Apple", "Banana", "Mango", "Orange", "Pineapple", "Strawberry", "Blueberry", "Raspberry", "Blackberry", "Grape",
-    "Watermelon", "Cantaloupe", "Papaya", "Guava", "Lychee", "Kiwi", "Dragon fruit", "Jackfruit", "Peach", "Pear",
-    "Cherry", "Plum", "Apricot", "Pomegranate", "Coconut", "Lemon", "Lime", "Grapefruit", "Fig", "Passion fruit",
-    "Starfruit", "Durian", "Mulberry", "Cranberry", "Tangerine", "Mandarin", "Custard apple", "Sapodilla", "Mangosteen",
-    "Longan", "Rambutan", "Jujube", "Date", "Quince", "Persimmon", "Loquat", "Gooseberry", "Boysenberry",
-    "Elderberry", "Huckleberry", "Blackcurrant", "Redcurrant", "White currant", "Cloudberry", "Soursop", "Ackee",
-    "Breadfruit", "Horned melon", "Salak", "Medlar", "Feijoa", "Bilberry", "Miracle fruit", "Cupuacu", "Marang",
-    "Santol", "Velvet apple", "Bael", "Rose apple", "Sugar apple", "Buddha’s hand", "Yumberry", "Pomelo", "Nance",
-    "Barbados cherry", "Indian gooseberry", "Ackee apple", "Mountain papaya", "Imbu", "Genip", "Hog plum", "Lucuma",
-    "Mammee apple", "Monstera deliciosa", "Oil palm fruit", "Pequi", "Rollinia", "Safou", "Soncoya", "Surinam cherry",
-    "Tamarillo", "Ugli fruit", "White sapote", "Xigua", "Yangmei", "Ziziphus fruit", "Langsat", "Medjool date", "Prickly pear" 
+    "Apple", "Banana", "Mango", "Orange", "Pineapple", "Strawberry",
+    "Blueberry", "Grapes", "Watermelon", "Peach", "Pear", "Cherry",
+    "Lemon", "Lime", "Papaya", "Guava", "Kiwi", "Coconut", "Plum", 
+    "Sugar Apple", "Jackfruit", "Durian", "Rambutan", "Dragon Fruit",
+    "Starfruit", "Tangerine", "Papaya"
   ],
-  animals: [    "Dog", "Cat", "Lion", "Tiger", "Elephant", "Giraffe", "Zebra", "Kangaroo", "Koala", "Panda",
-    "Bear", "Wolf", "Fox", "Rabbit", "Deer", "Monkey", "Gorilla", "Dolphin", "Whale", "Shark",
-    "Eagle", "Owl", "Parrot", "Penguin", "Crocodile", "Snake", "Turtle", "Horse", "Camel", "Sheep",
-    "Goat", "Cow", "Pig", "Chicken", "Duck", "Turkey", "Frog", "Toad", "Lizard", "Chameleon",
-    "Leopard", "Cheetah", "Hyena", "Rhinoceros", "Hippopotamus", "Moose", "Squirrel", "Bat", "Peacock", "Swan",
-    "Flamingo", "Pelican", "Seagull", "Pigeon", "Dove", "Falcon", "Hawk", "Vulture", "Stork", "Heron",
-    "Crane", "Macaw", "Toucan", "Quail", "Crow", "Raven", "Magpie", "Woodpecker", "Kingfisher", "Robin",
-    "Antelope", "Bison", "Buffalo", "Yak", "Donkey", "Mule", "Armadillo", "Porcupine", "Hedgehog", "Otter",
-    "Seal", "Sea lion", "Walrus", "Manatee", "Narwhal", "Orca", "Swordfish", "Marlin", "Stingray", "Manta ray",
-    "Octopus", "Squid", "Lobster", "Crab", "Shrimp", "Jellyfish", "Starfish", "Clam", "Oyster", "Snail"],
+  animals: [
+    "Dog", "Cat", "Carabao", "Cow", "Pig", "Goat", "Chicken", "Duck", "Horse", "Sheep",
+    "Monkey", "Elephant", "Lion", "Tiger", "Bear", "Fox", "Rabbit", "Deer", "Wolf", "Zebra",
+    "Giraffe", "Kangaroo", "Panda", "Crocodile", "Snake", "Frog", "Turtle", "Shark", "Whale", "Dolphin",
+    "Fish", "Crab", "Octopus", "Squid", "Eagle", "Owl", "Parrot", "Pigeon", "Sparrow", "Bat",
+    "Rat", "Mouse", "Ant", "Bee", "Butterfly", "Dragonfly", "Snail", "Lizard", "Goose", "Turkey",
+    "Penguin", "Seal", "Otter", "Swan", "Peacock", "Camel", "Leopard", "Hippo", "Rhino", "Fox"
+  ],
   countries: [
-   "Philippines", "Japan", "China", "South Korea", "Thailand", "Vietnam", "Malaysia", "Indonesia", "India", "Pakistan",
-    "Australia", "New Zealand", "United States", "Canada", "Mexico", "Brazil", "Argentina", "Chile", "Peru", "Spain",
-    "France", "Germany", "Italy", "United Kingdom", "Russia", "Turkey", "Saudi Arabia", "Egypt", "South Africa", "Nigeria",
-    "Kenya", "Ethiopia", "Morocco", "Algeria", "Iraq", "Iran", "Afghanistan", "Nepal", "Bangladesh", "Sri Lanka",
-    "Norway", "Sweden", "Denmark", "Finland", "Poland", "Ukraine", "Greece", "Portugal", "Belgium", "Netherlands",
-    "Switzerland", "Austria", "Czech Republic", "Slovakia", "Hungary", "Romania", "Bulgaria", "Serbia", "Croatia", "Slovenia",
-    "Bosnia and Herzegovina", "Montenegro", "Albania", "Kosovo", "Macedonia", "Georgia", "Armenia", "Azerbaijan", "Kazakhstan", "Uzbekistan",
-    "Turkmenistan", "Kyrgyzstan", "Tajikistan", "Mongolia", "Laos", "Cambodia", "Myanmar", "Brunei", "Singapore", "Maldives",
-    "Bhutan", "Lebanon", "Jordan", "Syria", "Yemen", "Oman", "Qatar", "United Arab Emirates", "Bahrain", "Kuwait",
-    "Sudan", "South Sudan", "Somalia", "Uganda", "Tanzania", "Rwanda", "Burundi", "Zambia", "Zimbabwe", "Botswana"
+    "Philippines", "Japan", "China", "Canada", "Brazil", "France", "Germany", "Italy", "Mexico", "India",
+    "United States", "Australia", "Russia", "Spain", "Thailand", "South Korea", "United Kingdom", "Indonesia", "Malaysia", "Vietnam",
+    "Singapore", "Argentina", "Sweden", "Norway", "Finland", "Denmark", "Switzerland", "Netherlands", "Belgium", "Portugal",
+    "Poland", "Egypt", "Saudi Arabia", "Turkey", "Pakistan", "Greece", "Ireland", "New Zealand", "South Africa", "Chile",
+    "Colombia", "Peru", "Iceland", "Bangladesh", "Nepal", "Myanmar", "Sri Lanka", "Cambodia", "Laos", "Brunei"
   ],
 };
 
